@@ -43,15 +43,15 @@ On peut alors distinguer plusieurs groupes d'animaux (inutile de faire une ACP i
 
 ## Graphes et réseaux
 
-Afin d'analyser les relations entre les espèces, j'ai utilisé des outils d'analyse de réseaux ([cette conférence](https://www.youtube.com/watch?v=7fsreJMy_pI) me fut utile par exemple). A chaque fois que plusieurs animaux apparaissent ensemble dans une fable comme personnages majeurs, on leur attribue une proximité de 1 sur cette occurence. L'ensemble des valeurs crée une "matrice de proximité" qui définit un réseau (ou un *graphe*). Le graphe pourraît être dirigé (une liaison est souvent asymétrique: l'un domine l'autre) mais il est plus simple de présenter des relations simplement symmétriques. Les humains ont été exclus de cette représentation car ils sont trop présents et influencent trop fortement l'aspect du réseau. Cela donne ça:
+Afin d'analyser les relations entre les espèces, j'ai utilisé des outils d'analyse de réseaux ([cette conférence](https://www.youtube.com/watch?v=7fsreJMy_pI) me fut utile par exemple). A chaque fois que plusieurs animaux apparaissent ensemble dans une fable comme personnages majeurs, on leur attribue une proximité de 1 sur cette occurence et on les relie par un trait sur le graphique. L'ensemble des valeurs crée une "matrice de proximité" qui définit un réseau (ou un *graphe*). Le graphe pourraît être dirigé (une liaison est souvent asymétrique: l'un domine l'autre) mais il est plus simple de présenter des relations simplement symmétriques. Les humains ont été exclus de cette représentation car ils sont trop présents et influencent trop fortement l'aspect du réseau. Ci-dessosu le résultat, avec les gros noeuds symbolisant un nombre important de citations (non de relations) avec en rouge les animaux "perdants", en bleu les "gagnants", et une épaisseur des segments proportionnelle au nombre de fables où deux animaux se retrouvent ensemble:
 
 ![reseau des animaux](reseau_animaux.png)
 
+Plusieurs observations s'imposent: le réseau a un degré moyen de 4.2, c'est le nombre de relations moyen d'un animal. Les animaux du gros groupe central sont principalement les mammifères (cf.premier barplot), le groupe plus excentré à droite se compose d'oiseaux et rongeurs\* (remarquons qu'ils ont un régime alimentaire souvent proche!); et sur le pourtour des personnages plus diversifiés. (\*les rongeurs sont une famille non une classe...)
 
+![reseau des animaux avec taxons](reseau_animaux_taxons.png)
 
-
-
-
+A ce stade, on peut caractériser les noeuds du réseau par des mesures spécifiques dites de "centralité". Parmi les plus utilisées, la centralité de proximité (la distance moyenne à tous les autres noeuds du réseau), la centralité de degré (le nombre de contacts directs), et la centralité, la centralité d'intermédiarité (combien de fois d'autres chemins passent par un noeud donné). Le tableau suivant
 
 
 
