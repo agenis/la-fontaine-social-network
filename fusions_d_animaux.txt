@@ -1,5 +1,5 @@
-passereaux, moineaux, etc. => oiseaux
-genisse, vache, taureau => vache (boeuf laiss  part)
+passereaux, moineaux, etc. => petits oiseaux
+genisse, vache, taureau => vache (boeuf laissé à part)
 mouton, brebis, agneau => mouton
 ane, baudet => ane
 mouche, moucheron, mouche  miel => mouche
