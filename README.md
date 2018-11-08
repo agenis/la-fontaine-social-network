@@ -35,15 +35,17 @@ Tout marquis veut avoir des pages.</i>
 
 Ainsi, dans cette fable classique, j'attribue un score de `-1` à la grenouille qui fait les frais de la morale, mais de `0` au boeuf (il fait la figuration). J'avoue que dans certains cas le codage est sujet à interprétation, comme pour la fable du [chien et du loup](http://www.la-fontaine-ch-thierry.net/loupchien.htm) par exemple (Chacun est-il heureux dans son état? Le statut de loup est-il supérieur? Délicat de statuer!). En sommant ces scores unitaires sur l'ensemble des fables, les animaux ont un score net global positif, négatif, ou nul qui s'étend de -6 (le mouton) à +7 (le chat). 
 
-On peut alors distinguer plusieurs groupes d'animaux (inutile de faire une ACP ici, un plot XY des scores positifs et négatifs est parlant): les petits animaux qui sont peu cités forment un gros tas, les animaux qui sont très souvent présents et "victimes" de la fable en haut à gauche, les animaux qui sont très cités et presque toujours vainqueurs (en bas à droite), et ceux qui cumulent de nombreuses victoires et défaites: le loup, le renard, le lion. Le loup et le renard ont les mêmes résultats sauf lorsqu'ils interagissent ensemble, c'est alors systématiquement le renard qui l'emporte. Le lion patît, malgré sa force, de nombreux ennemis qui se liguent contre lui ou utilisent la ruse. Certains, au milieu du graphe, naviguent entre deux eaux (chien, rat, singe...) et ont un destin incertain.
+On peut alors distinguer plusieurs groupes d'animaux (inutile de faire une ACP ici, un plot XY des scores positifs et négatifs est parlant): les petits animaux qui sont peu cités forment un gros tas, les animaux qui sont très souvent présents et "victimes" de la fable en haut à gauche, les animaux qui sont très cités et presque toujours vainqueurs (en bas à droite), et ceux qui cumulent de nombreuses victoires et défaites: le loup, le renard, le lion. Le loup et le renard ont les mêmes résultats sauf lorsqu'ils interagissent ensemble, c'est alors systématiquement le renard qui l'emporte. Le lion sort souvent indemne des fables, mais par des procédés peu enviables (violence, arbitraire), et parfois patît, malgré sa force, de nombreux ennemis qui se liguent contre lui ou utilisent la ruse. Certains, au milieu du graphe, naviguent entre deux eaux (chien, rat, singe...) et ont un destin incertain.
+
+############# note: monterr l'influence de l'homme sur ce graphe
 
 ![scores des animaux](scores.png)
 
 ## Graphes et réseaux
 
-Afin d'analyser les relations entre les espèces, j'ai utilisé des outils d'analyse de réseaux ([cette conférence](https://www.youtube.com/watch?v=7fsreJMy_pI) me fut utile par exemple)
+Afin d'analyser les relations entre les espèces, j'ai utilisé des outils d'analyse de réseaux ([cette conférence](https://www.youtube.com/watch?v=7fsreJMy_pI) me fut utile par exemple). A chaque fois que plusieurs animaux apparaissent ensemble dans une fable comme personnages majeurs, on leur attribue une proximité de 1 sur cette occurence. L'ensemble des valeurs crée une "matrice de proximité" qui définit un réseau (ou un *graphe*). Le graphe pourraît être dirigé (une liaison est souvent asymétrique: l'un domine l'autre) mais il est plus simple de présenter des relations simplement symmétriques. Les humains ont été exclus de cette représentation car ils sont trop présents et influencent trop fortement l'aspect du réseau. Cela donne ça:
 
-
+![reseau des animaux](reseau_animaux.png)
 
 
 
