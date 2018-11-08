@@ -10,8 +10,13 @@ Mais avant de démarrer, commençons par quelques statistiques ennuyeuses sur le
 
 <h6> <i> certains animaux ont été regroupés manuellement, étant de caractère très proche comme le serpent ou la couleuvre. D'autres ont été à dessein laissés séparés comme la poule et le coq, dont la symbolique respective est finalement assez éloignée. La liste est visible dans ce [fichier texte](https://gitlab.com/agenis/la-fontaine-social-network/blob/master/fusions_d_animaux.txt). </h6> </i> 
 
+Une autre source de données est utilisée pour caractériser les animaux: la [taxonomie](http://informations-documents.com/environnement.ecole/regne_animal_1.htm) du règle animal, afin d'attribuer à chacun la classe qui lui revient: mammifère, oiseau, etc. Deux autres variables codées à la main sont le caractère carnivore ou herbivore, et le caractère domestiqué ou sauvage de l'animal. Le nombre de citations des 50 premiers animaux, selon sa classe taxonomique, est présenté ci-dessous, et on retrouve naturellement les animaux familiers dans les plus cités.
 
+![taxons](apparitions.png)
 
+## "Score" d'un personnage
+
+J'ai souhaité attribuer à chaque animal un score défini comme le nombre de cas d'où il sort "vainqueur" moins le nombre de cas d'où il sort "perdant". 
 
 <i>*Une grenouille vit un boeuf* <br />
 Qui lui sembla de belle taille. <br />
@@ -28,13 +33,13 @@ Tout bourgeois veut bâtir comme les grands seigneurs ,<br />
 Tout prince a des ambassadeurs,<br />
 Tout marquis veut avoir des pages.</i>
 
-Dans cette fable classique, j'attribue un score de `-1` à la grenouille qui fait les frais de la morale, mais de `0` au boeuf (il fait la figuration). J'avoue que dans certains cas le codage est sujet à interprétation.
-
-Une autre source de données est utilisée pour caractériser les animaux: la [taxonomie](http://informations-documents.com/environnement.ecole/regne_animal_1.htm) du règle animal, afin d'attribuer à chacun la classe qui lui revient: mammifère, oiseau, etc. Deux autres variables codées à la main sont le caractère carnivore ou herbivore, et le caractère domestiqué ou sauvage de l'animal. Le nombre de citations de chaque animal, selon sa classe taxonomique est présenté ci-dessous:
-
-![taxons](apparitions.png)
+Ainsi, dans cette fable classique, j'attribue un score de `-1` à la grenouille qui fait les frais de la morale, mais de `0` au boeuf (il fait la figuration). J'avoue que dans certains cas le codage est sujet à interprétation, comme pour la fable du [chien et du loup](http://www.la-fontaine-ch-thierry.net/loupchien.htm) par exemple (Chacun est-il heureux dans son état? Le statut de loup est-il supérieur? Délicat de statuer!). En sommant ces scores unitaires sur l'ensemble des fables, les animaux ont un score net global positif, négatif, ou nul qui s'étend de -6 (le mouton) à +7 (le chat). 
 
 
+## Graphes et réseaux
+
+Afin d'analyser les relations entre les espèces, j'ai utilisé des outils d'analyse de réseaux (cette conférence me fut utile par exemple)
+La grenouille et le boeuf ont ici une proximité de 1, symmétrique. 
 
 
 
