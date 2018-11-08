@@ -1,0 +1,17 @@
+passereaux, moineaux, etc. => oiseaux
+genisse, vache, taureau => vache (boeuf laissé à part)
+mouton, brebis, agneau=> mouton
+âne, baudet=> ane
+mouche, moucheron, mouche à miel => mouche
+chat, chatte => chat
+aigle, milan, autour, faucon => rapace
+colombe, pigeon => pigeon
+chèvre, bouc => chèvre
+cheval, jument => cheval
+dromadaire, chameau => chameau
+serpent, couleuvre => serpent
+cochon, truie => cochon
+poisson, anguille (1occ.) => poisson
+coq, chapon (1 occ) => coq
+poule, dindon, poulet => poule
+frelon, guepe => guepe
