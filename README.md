@@ -47,18 +47,26 @@ Afin d'analyser les relations entre les espèces, j'ai utilisé des outils d'ana
 
 ![reseau des animaux](reseau_animaux.png)
 
-Plusieurs observations s'imposent: le réseau a un degré moyen de 4.2, c'est le nombre de relations moyen d'un animal. Les animaux du gros groupe central sont principalement les mammifères (cf.premier barplot), le groupe plus excentré à droite se compose d'oiseaux et rongeurs\* (remarquons qu'ils ont un régime alimentaire souvent proche!); et sur le pourtour des personnages plus diversifiés. (\*les rongeurs sont une famille non une classe...)
+Plusieurs observations s'imposent: le réseau a un degré moyen de 4.2, c'est le nombre de relations moyen d'un animal. Les animaux du gros groupe central sont principalement les mammifères (cf.premier barplot), le groupe plus excentré à droite se compose d'oiseaux et rongeurs\* (remarquons qu'ils ont un régime alimentaire souvent proche!); et sur le pourtour des personnages plus diversifiés. (\*les rongeurs sont une famille non une classe...). La Fontaine n'a donc pas choisi ses personnages de façon aléatoire mais a privilégié des liens existants naturels entre eux (enfin, le singe...)
 
 ![reseau des animaux avec taxons](reseau_animaux_taxons.png)
 
-A ce stade, on peut caractériser les noeuds du réseau par des mesures spécifiques dites de "centralité". Parmi les plus utilisées, la centralité de proximité (la distance moyenne à tous les autres noeuds du réseau), la centralité de degré (le nombre de contacts directs), et la centralité, la centralité d'intermédiarité (combien de fois d'autres chemins passent par un noeud donné). Le tableau suivant
+A ce stade, on peut caractériser les noeuds du réseau par des mesures spécifiques dites de "centralité". Parmi les plus utilisées, la centralité de proximité (la distance moyenne à tous les autres noeuds du réseau), la centralité de degré (le nombre de contacts directs), et la centralité, la centralité d'intermédiarité (combien de fois d'autres chemins passent par un noeud donné). Le tableau suivant donne le palmarès pour chaque mesure:
+
+| . | degré  | proximité | intermédiarité |
+|---|--------|-----------|----------------|
+| 1 | renard | renard    | renard         |
+| 2 | lion   | chat      | rapace         |
+| 3 | rapace | chien     | chat           |
+| 4 | singe  | singe     | petits-oiseaux |
+| 5 | ane    | lièvre    | singe          |
+| 6 | chien  | lion      | chien          |
+| 7 | loup   | rat       | rat            |
+
+la première colonne correspond à la mesure déjà vue précédemment de nombre de connections; le renard arrive premier partout du fait de ses connections nombreuses avec toutes sortes d'animaux; la mesure de proximité est intéressante car elle donne une centralité spatiale (un peu comme un centre de gravité) à ce titre le chien et le chat, situés au milieu des différents ensembles, ont de bons scores. Enfin la mesure d'intermédiarité favorise les personnages qui font le lien entre plusieurs groupes isolés (en particulier le groupe des oiseaux qui s'écarte vers le coin droit): le rapace et les oiseaux (!) ont de très bons scores. 
 
 
-
-La grenouille et le boeuf ont ici une proximité de 1, symmétrique. 
-
-
-
+## Prédictions
 
 
 
