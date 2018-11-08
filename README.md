@@ -71,8 +71,18 @@ On souhaite prédire. Mais prédire quoi? Dans un premier temps, prédire/expliq
 
 Ce modèle décrit un score influencé fortement à la hausse pour les animaux carnivores, et fortement à la baisse pour les herbivores domestiquées (proies faciles!), ce qui est plutôt bien interprétable.
 
-Une autre type de prédiction est fournie par l'indice de Jaccard, qui étudie les nouvelles relations susceptibles d'apparaitre entre les animaux: il se base sur la complémentarité des relations entre deux noeuds non encore connectés.
+Une autre type de prédiction est fournie par l'indice de Jaccard, qui étudie les nouvelles relations susceptibles d'apparaitre entre les animaux: il se base sur la complémentarité des relations entre deux noeuds non encore connectés. Si on ne conserve que les prédictions sur les animaux importants, le réseau devrait voir apparaître bientôt:
+- la fable du lièvre et du loup
+- la fable du cheval et de l'ours
+- la fable du rhinocéros et de la baleine (!)
 
+Il ne reste plus aux poètes en herbe qu'à inventer les péripéties de ces fables fictives!
+
+## Conclusion
+
+Cette étude a été réalisée sous **Python 3.6** à l'aide notamment de la librairie `Networkx` et l'aide de **R** pour certains graphiques. 
+
+La lecture des receuils de fables a été un passe temps passionnant! L'actualité de certaines (société, politique) est restée criante. L'école de vie de La Fontaine (il a écrit à destination du Dauphin) est une école sévère, teintée de punition et de moquerie. Elle rappelle la cruelle sélection darwinienne qui laisse peu de place pour le plus faible (de corps ou d'esprit), qui ne peut compter que sur l'association au fort (ou sur la providence) pour s'en sortir. Le score des hommes dans les fables est très, très négatif (-42) et montre un certain pessimisme de l'auteur vis à vis de la nature humaine, quoique certains textes soient emprunts d'espoir (voir la fable de la mort et du bucheron). Un certain humour y transpire aussi (X,1): *"Un homme vit une couleuvre. [...] A ces mots l'animal pervers (c'est le serpent que je veux dire, et non l'homme, on pourrait aisément s'y tromper)"*
 
 
 
