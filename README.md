@@ -37,8 +37,6 @@ Ainsi, dans cette fable classique, j'attribue un score de `-1` à la grenouille 
 
 On peut alors distinguer plusieurs groupes d'animaux (inutile de faire une ACP ici, un plot XY des scores positifs et négatifs est parlant): les petits animaux qui sont peu cités forment un gros tas, les animaux qui sont très souvent présents et "victimes" de la fable en haut à gauche, les animaux qui sont très cités et presque toujours vainqueurs (en bas à droite), et ceux qui cumulent de nombreuses victoires et défaites: le loup, le renard, le lion. Le loup et le renard ont les mêmes résultats sauf lorsqu'ils interagissent ensemble, c'est alors systématiquement le renard qui l'emporte. Le lion sort souvent indemne des fables, mais par des procédés peu enviables (violence, arbitraire), et parfois patît, malgré sa force, de nombreux ennemis qui se liguent contre lui ou utilisent la ruse. Certains, au milieu du graphe, naviguent entre deux eaux (chien, rat, singe...) et ont un destin incertain.
 
-############# note: monterr l'influence de l'homme sur ce graphe
-
 ![scores des animaux](scores.png)
 
 ## Graphes et réseaux
@@ -63,15 +61,17 @@ A ce stade, on peut caractériser les noeuds du réseau par des mesures spécifi
 | 6 | chien  | lion      | chien          |
 | 7 | loup   | rat       | rat            |
 
-la première colonne correspond à la mesure déjà vue précédemment de nombre de connections; le renard arrive premier partout du fait de ses connections nombreuses avec toutes sortes d'animaux; la mesure de proximité est intéressante car elle donne une centralité spatiale (un peu comme un centre de gravité) à ce titre le chien et le chat, situés au milieu des différents ensembles, ont de bons scores. Enfin la mesure d'intermédiarité favorise les personnages qui font le lien entre plusieurs groupes isolés (en particulier le groupe des oiseaux qui s'écarte vers le coin droit): le rapace et les oiseaux (!) ont de très bons scores. 
-
+La première colonne correspond à la mesure déjà vue précédemment de nombre de connections; le renard arrive premier partout du fait de ses connections nombreuses avec toutes sortes d'animaux; la mesure de proximité est intéressante car elle donne une centralité spatiale (un peu comme un centre de gravité) à ce titre le chien et le chat, situés au milieu des différents ensembles, ont de bons scores. Enfin la mesure d'intermédiarité favorise les personnages qui font le lien entre plusieurs groupes isolés (en particulier le groupe des oiseaux qui s'écarte vers le coin droit): le rapace et les oiseaux (!) ont de très bons scores. 
 
 ## Prédictions
 
+On souhaite prédire. Mais prédire quoi? Dans un premier temps, prédire/expliquer le score des animaux avec les maigres variables à disposition. Un modèle linéaire est construit pour modéliser le score net d'un animal selon sa taxonomie, son régime alimentaire, sa domestication et d'éventuelles interactions entre ces paramètres. Une fois ce modèle complet établi, on lance une procédure de sélection de variables pour ne conserver que les plus significatives (au seuil de 10%, sur le critère du R²-ajusté). On obtient alors, après validation de la normalité des résidus:
 
+`SCORE = -0.40 + 1.7*CARNIVORE - 1.3*HERBIVORE_DOMESTIQUE`
 
+Ce modèle décrit un score influencé fortement à la hausse pour les animaux carnivores, et fortement à la baisse pour les herbivores domestiquées (proies faciles!), ce qui est plutôt bien interprétable.
 
-
+Une autre type de prédiction est fournie par l'indice de Jaccard, qui étudie les nouvelles relations susceptibles d'apparaitre entre les animaux: il se base sur la complémentarité des relations entre deux noeuds non encore connectés.
 
 
 
