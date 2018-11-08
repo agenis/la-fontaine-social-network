@@ -16,7 +16,7 @@ Une autre source de données est utilisée pour caractériser les animaux: la [t
 
 ## "Score" d'un personnage
 
-J'ai souhaité attribuer à chaque animal un score défini comme le nombre de cas d'où il sort "vainqueur" moins le nombre de cas d'où il sort "perdant". 
+J'ai souhaité attribuer à chaque animal un score défini comme le nombre de cas d'où il sort "vainqueur" moins le nombre de cas d'où il sort "perdant" de la morale de la fable.
 
 <i>*Une grenouille vit un boeuf* <br />
 Qui lui sembla de belle taille. <br />
